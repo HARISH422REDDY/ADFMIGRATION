@@ -1,0 +1,24 @@
+{
+	"name": "SCH_TRIGGER_ADLSSOURCE",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_ADLS_CSV_ADLS_SCH_TRIGGER",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2026-11-06T19:15:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

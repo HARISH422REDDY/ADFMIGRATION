@@ -1,0 +1,15 @@
+{
+	"name": "adfdevsqltoadls",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ae4a5ab5-7a26-4e2a-8132-e80c44a602f6",
+		"tenantId": "d6365567-36c5-4125-8a25-228f314e89d0"
+	}
+}

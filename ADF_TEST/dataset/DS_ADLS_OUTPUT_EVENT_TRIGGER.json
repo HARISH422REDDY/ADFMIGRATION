@@ -1,0 +1,20 @@
+{
+	"name": "DS_ADLS_OUTPUT_EVENT_TRIGGER",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_ADLS_OUTPUT_EVENT_TRIGGER",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "event-trigger-output"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

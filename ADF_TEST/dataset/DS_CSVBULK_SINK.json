@@ -1,0 +1,20 @@
+{
+	"name": "DS_CSVBULK_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_CSVBULK_SINK",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "outputtrigger"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
