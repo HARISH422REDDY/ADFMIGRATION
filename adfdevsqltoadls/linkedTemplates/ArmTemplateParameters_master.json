@@ -1,0 +1,138 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdevsqltoadls"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"DS_ADLS_OUTPUT_EVENT_TRIGGER_accountKey": {
+			"value": ""
+		},
+		"DS_SQLSERVER_password": {
+			"value": ""
+		},
+		"DS_SQL_Source_password": {
+			"value": ""
+		},
+		"DS_lookup_csv_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_EVENT_TRIGGER_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_OUTPUT_accountKey": {
+			"value": ""
+		},
+		"LS_CSVBULK_SINK_accountKey": {
+			"value": ""
+		},
+		"LS_CSVBULK_SOURCE_accountKey": {
+			"value": ""
+		},
+		"LS_IF_CSVsource_accountKey": {
+			"value": ""
+		},
+		"LS_IF_PARAQUETsource_accountKey": {
+			"value": ""
+		},
+		"LS_SQL_password": {
+			"value": ""
+		},
+		"LS_SourceCSV_accountKey": {
+			"value": ""
+		},
+		"LS_csv_accountKey": {
+			"value": ""
+		},
+		"LS_foreach_sourcecsv_accountKey": {
+			"value": ""
+		},
+		"LS_sinkPARAQUET_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsink.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsink.dfs.core.windows.net/"
+		},
+		"DS_ADLS_OUTPUT_EVENT_TRIGGER_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsink.dfs.core.windows.net/"
+		},
+		"DS_SQLSERVER_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"DS_SQLSERVER_properties_typeProperties_database": {
+			"value": "AdventureWorks2025"
+		},
+		"DS_SQLSERVER_properties_typeProperties_userName": {
+			"value": "harishsqlserver"
+		},
+		"DS_SQL_Source_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"DS_SQL_Source_properties_typeProperties_database": {
+			"value": "AdventureWorks2025"
+		},
+		"DS_SQL_Source_properties_typeProperties_userName": {
+			"value": "harishsqlserver"
+		},
+		"DS_lookup_csv_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_ADLS_EVENT_TRIGGER_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_ADLS_OUTPUT_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsink.dfs.core.windows.net/"
+		},
+		"LS_CSVBULK_SINK_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsink.dfs.core.windows.net/"
+		},
+		"LS_CSVBULK_SOURCE_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_IF_CSVsource_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_IF_PARAQUETsource_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_SQL_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQL_properties_typeProperties_database": {
+			"value": "AdventureWorks2025"
+		},
+		"LS_SQL_properties_typeProperties_userName": {
+			"value": "harishsqlserver"
+		},
+		"LS_SourceCSV_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_csv_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_foreach_sourcecsv_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsource.dfs.core.windows.net/"
+		},
+		"LS_sinkPARAQUET_properties_typeProperties_url": {
+			"value": "https://adlsdevsqlsink.dfs.core.windows.net/"
+		},
+		"EVENT_TRIGGER_ADLSSOURCE_properties_typeProperties_scope": {
+			"value": "/subscriptions/b41227a1-c635-42d4-9ba2-2eeea0db6d3c/resourceGroups/rg_csv_to_adls_project/providers/Microsoft.Storage/storageAccounts/adlsdevsqlsource"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
