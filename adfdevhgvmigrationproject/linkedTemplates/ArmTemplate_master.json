@@ -1,0 +1,175 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdevhgvmigrationproject"
+		},
+		"LS_ONPREM_SQLSERVER_DW_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_ONPREM_SQLSERVER_DW'"
+		},
+		"LS_PARENT_SQLSEREVR_DW_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_PARENT_SQLSEREVR_DW'"
+		},
+		"LS_SQLSERVER_TABLE_LKUP_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLSERVER_TABLE_LKUP'"
+		},
+		"LS_SQLSOURCE_ADLS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLSOURCE_ADLS'"
+		},
+		"LS_SQLTABLE_PARAQUET1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SQLTABLE_PARAQUET1'"
+		},
+		"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SQLMIGRATION"
+		},
+		"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "harishsqlserver"
+		},
+		"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SQLMIGRATION"
+		},
+		"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "harishsqlserver"
+		},
+		"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SQLMIGRATION"
+		},
+		"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "harishsqlserver"
+		},
+		"LS_SQLSOURCE_ADLS_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLSOURCE_ADLS_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SQLMIGRATION"
+		},
+		"LS_SQLSOURCE_ADLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "harishsqlserver"
+		},
+		"LS_SQLTABLE_PARAQUET1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlshgvmigrationproject.dfs.core.windows.net/"
+		},
+		"Self-hosted-IR-migration_properties_typeProperties_linkedInfo_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/b41227a1-c635-42d4-9ba2-2eeea0db6d3c/resourcegroups/rg_csv_to_adls_project/providers/Microsoft.DataFactory/factories/adfdevsqltoadls/integrationruntimes/SELFHOSTED"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdevhgvmigrationproject_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_SQLTABLE_PARAQUET1_accountKey": {
+						"value": "[parameters('LS_SQLTABLE_PARAQUET1_accountKey')]"
+					},
+					"LS_ONPREM_SQLSERVER_DW_password": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_DW_password')]"
+					},
+					"LS_PARENT_SQLSEREVR_DW_password": {
+						"value": "[parameters('LS_PARENT_SQLSEREVR_DW_password')]"
+					},
+					"LS_SQLSERVER_TABLE_LKUP_password": {
+						"value": "[parameters('LS_SQLSERVER_TABLE_LKUP_password')]"
+					},
+					"LS_SQLSOURCE_ADLS_password": {
+						"value": "[parameters('LS_SQLSOURCE_ADLS_password')]"
+					},
+					"LS_SQLTABLE_PARAQUET1_properties_typeProperties_url": {
+						"value": "[parameters('LS_SQLTABLE_PARAQUET1_properties_typeProperties_url')]"
+					},
+					"Self-hosted-IR-migration_properties_typeProperties_linkedInfo_resourceId": {
+						"value": "[parameters('Self-hosted-IR-migration_properties_typeProperties_linkedInfo_resourceId')]"
+					},
+					"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_server": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_DW_properties_typeProperties_server')]"
+					},
+					"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_database": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_DW_properties_typeProperties_database')]"
+					},
+					"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_userName": {
+						"value": "[parameters('LS_ONPREM_SQLSERVER_DW_properties_typeProperties_userName')]"
+					},
+					"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_server": {
+						"value": "[parameters('LS_PARENT_SQLSEREVR_DW_properties_typeProperties_server')]"
+					},
+					"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_database": {
+						"value": "[parameters('LS_PARENT_SQLSEREVR_DW_properties_typeProperties_database')]"
+					},
+					"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_userName": {
+						"value": "[parameters('LS_PARENT_SQLSEREVR_DW_properties_typeProperties_userName')]"
+					},
+					"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_server')]"
+					},
+					"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_database')]"
+					},
+					"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_userName')]"
+					},
+					"LS_SQLSOURCE_ADLS_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLSOURCE_ADLS_properties_typeProperties_server')]"
+					},
+					"LS_SQLSOURCE_ADLS_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLSOURCE_ADLS_properties_typeProperties_database')]"
+					},
+					"LS_SQLSOURCE_ADLS_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLSOURCE_ADLS_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

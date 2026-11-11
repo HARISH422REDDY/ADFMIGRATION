@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdevhgvmigrationproject"
+		},
+		"LS_ONPREM_SQLSERVER_DW_password": {
+			"value": ""
+		},
+		"LS_PARENT_SQLSEREVR_DW_password": {
+			"value": ""
+		},
+		"LS_SQLSERVER_TABLE_LKUP_password": {
+			"value": ""
+		},
+		"LS_SQLSOURCE_ADLS_password": {
+			"value": ""
+		},
+		"LS_SQLTABLE_PARAQUET1_accountKey": {
+			"value": ""
+		},
+		"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_database": {
+			"value": "SQLMIGRATION"
+		},
+		"LS_ONPREM_SQLSERVER_DW_properties_typeProperties_userName": {
+			"value": "harishsqlserver"
+		},
+		"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_database": {
+			"value": "SQLMIGRATION"
+		},
+		"LS_PARENT_SQLSEREVR_DW_properties_typeProperties_userName": {
+			"value": "harishsqlserver"
+		},
+		"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_database": {
+			"value": "SQLMIGRATION"
+		},
+		"LS_SQLSERVER_TABLE_LKUP_properties_typeProperties_userName": {
+			"value": "harishsqlserver"
+		},
+		"LS_SQLSOURCE_ADLS_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLSOURCE_ADLS_properties_typeProperties_database": {
+			"value": "SQLMIGRATION"
+		},
+		"LS_SQLSOURCE_ADLS_properties_typeProperties_userName": {
+			"value": "harishsqlserver"
+		},
+		"LS_SQLTABLE_PARAQUET1_properties_typeProperties_url": {
+			"value": "https://adlshgvmigrationproject.dfs.core.windows.net/"
+		},
+		"Self-hosted-IR-migration_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/b41227a1-c635-42d4-9ba2-2eeea0db6d3c/resourcegroups/rg_csv_to_adls_project/providers/Microsoft.DataFactory/factories/adfdevsqltoadls/integrationruntimes/SELFHOSTED"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
