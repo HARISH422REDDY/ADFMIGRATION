@@ -1,0 +1,21 @@
+{
+	"name": "LS_SQLSERVER_source",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\SQLEXPRESS",
+			"database": "harishDB",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "harishsqlserver",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3NDVhMWFhYy04ODA5LTQ4NjEtYTYyZC0zYjIwNWMwYWE4MjciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SELFHOSTED",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
