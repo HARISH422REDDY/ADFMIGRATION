@@ -1,0 +1,26 @@
+{
+	"name": "SqlServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"db_name": {
+				"type": "string"
+			},
+			"password": {
+				"type": "string"
+			},
+			"user_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=localhost\\SQLEXPRESS;Initial Catalog=@{linkedService().db_name};User ID=@{linkedService().user_name};Password=@{linkedService().password}"
+		},
+		"connectVia": {
+			"referenceName": "SELFHOSTED",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
