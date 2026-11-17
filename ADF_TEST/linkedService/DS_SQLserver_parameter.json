@@ -1,0 +1,21 @@
+{
+	"name": "DS_SQLserver_parameter",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\SQLEXPRESS",
+			"database": "AdventureWorks2025",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "harishsqlserver",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxOWRmYzU2MC0wOWE4LTRhYmYtOWY3Yi1lNTM4YmE2NzBmM2EiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SELFHOSTED",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
