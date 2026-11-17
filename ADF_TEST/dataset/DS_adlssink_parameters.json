@@ -1,0 +1,88 @@
+{
+	"name": "DS_adlssink_parameters",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adlssink_parameters",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Container_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": {
+					"value": "@dataset().Container_name",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "BusinessEntityID",
+				"type": "INT32"
+			},
+			{
+				"name": "NationalIDNumber",
+				"type": "UTF8"
+			},
+			{
+				"name": "LoginID",
+				"type": "UTF8"
+			},
+			{
+				"name": "OrganizationLevel",
+				"type": "INT32"
+			},
+			{
+				"name": "JobTitle",
+				"type": "UTF8"
+			},
+			{
+				"name": "BirthDate",
+				"type": "DATE"
+			},
+			{
+				"name": "MaritalStatus",
+				"type": "UTF8"
+			},
+			{
+				"name": "Gender",
+				"type": "UTF8"
+			},
+			{
+				"name": "HireDate",
+				"type": "DATE"
+			},
+			{
+				"name": "SalariedFlag",
+				"type": "BOOLEAN"
+			},
+			{
+				"name": "VacationHours",
+				"type": "INT32"
+			},
+			{
+				"name": "SickLeaveHours",
+				"type": "INT32"
+			},
+			{
+				"name": "CurrentFlag",
+				"type": "BOOLEAN"
+			},
+			{
+				"name": "rowguid",
+				"type": "UTF8"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "INT96"
+			}
+		]
+	}
+}
